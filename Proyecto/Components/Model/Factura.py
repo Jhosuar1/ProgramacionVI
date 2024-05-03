@@ -25,3 +25,5 @@ class Factura:
 
     def obtener_productos(self):
         return self.__productos_comprados
+    
+    
