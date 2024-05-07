@@ -1,14 +1,14 @@
-from Model.ProductoControl import ProductoControl  # Importa la clase ProductoControl del módulo Model.ProductoControl
+from Model.ProductoControl import ProductoControl  
 
-class ControlPlagas(ProductoControl):  # Define una nueva clase llamada ControlPlagas que hereda de ProductoControl
+class ControlPlagas(ProductoControl):  
     def __init__(self, registro_ICA, nombre, frecuencia_aplicacion, valor, periodo_carencia):
-        super().__init__(registro_ICA, nombre, frecuencia_aplicacion, valor)  # Llama al constructor de la clase padre ProductoControl
+        super().__init__(registro_ICA, nombre, frecuencia_aplicacion, valor)  
         self.__periodo_carencia = periodo_carencia  # Inicializa el atributo privado __periodo_carencia con el valor recibido como argumento
 
-    @property  # Define un método periodo_carencia como una propiedad de solo lectura
+    @property  
     def periodo_carencia(self):
-        return self.__periodo_carencia  # Retorna el valor del atributo privado __periodo_carencia
+        return self.__periodo_carencia 
 
-    @periodo_carencia.setter  # Define un método setter para la propiedad periodo_carencia
+    @periodo_carencia.setter  
     def periodo_carencia(self, periodo_carencia):
-        self.__periodo_carencia = periodo_carencia  # Establece el valor del atributo privado __periodo_carencia con el valor recibido
+        self.__periodo_carencia = periodo_carencia  
