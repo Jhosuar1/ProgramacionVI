@@ -1,6 +1,6 @@
-from Crud.crud import CRUD  # Importa la clase CRUD desde un módulo llamado crud
+from Crud.crud import CRUD
 
-def mostrar_menu():  # Define una función para mostrar el menú del sistema
+def mostrar_menu():  
     print("Bienvenido al sistema de facturación agrícola")
     print("Seleccione una opción:")
     print("1. Mostrar todas las facturas.")
@@ -11,7 +11,7 @@ def mostrar_menu():  # Define una función para mostrar el menú del sistema
     print("6. Buscar facturas por cédula de cliente.")
     print("7. Salir")
 
-def mostrar_facturas(facturas):  # Define una función para mostrar todas las facturas almacenadas
+def mostrar_facturas(facturas):  
     if not facturas:
         print("No hay facturas almacenadas.")
     else:
@@ -24,7 +24,7 @@ def mostrar_facturas(facturas):  # Define una función para mostrar todas las fa
             print("Nombre del producto:", factura["nombre_producto"])
             print()
 
-def main():  # Define la función principal del programa
+def main(): 
     facturas = [  # Lista de facturas predefinidas
         {"fecha": "2024-01-01", "cedula_cliente": "1234567890", "nombre_cliente": "Juan", "valor_total": 100.0, "nombre_producto": "Antibiótico X", },
         {"fecha": "2024-02-01", "cedula_cliente": "2345678901", "nombre_cliente": "María", "valor_total": 200.0, "nombre_producto": "Fertilizante Y"},
@@ -32,7 +32,7 @@ def main():  # Define la función principal del programa
         # Añade más facturas aquí según sea necesario
     ]
 
-    while True:  # Bucle principal que muestra el menú y realiza acciones según la opción seleccionada
+    while True: 
         mostrar_menu()
         opcion = input("Ingrese el número de la opción que desea realizar: ")
 
@@ -80,7 +80,7 @@ def main():  # Define la función principal del programa
                 mostrar_facturas(facturas_cliente)
             else:
                 print("\nNo se encontraron facturas asociadas al cliente con cédula", cedula_cliente + ".")
-        elif opcion == "7":  # Sale del programa
+        elif opcion == "7": 
             print("Saliendo del programa...")
             break
         else:
