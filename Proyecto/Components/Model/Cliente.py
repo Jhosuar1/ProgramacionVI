@@ -1,31 +1,28 @@
-from Model.Factura import Factura  # Importamos la clase Factura
+from Model.Factura import Factura  
 
 class Cliente:
     def __init__(self, nombre, cedula):
-        self.__nombre = nombre  # Asignamos el nombre del cliente
-        self.__cedula = cedula  # Asignamos la cedula del cliente
-        self.__facturas = []  # Inicializamos una lista para almacenar las facturas del cliente
-
+        self.__nombre = nombre  
+        self.__cedula = cedula  
+        self.__facturas = []  
     @property
     def nombre(self):
-        return self.__nombre  # Devolvemos el nombre del cliente
-
+        return self.__nombre 
     @nombre.setter
     def nombre(self, nombre):
-        self.__nombre = nombre  # Asignamos un nuevo nombre al cliente
-
+        self.__nombre = nombre  
     @property
     def cedula(self):
-        return self.__cedula  # Devolvemos la cedula del cliente
-
+        return self.__cedula
+        
     @cedula.setter
     def cedula(self, cedula):
-        self.__cedula = cedula  # Asignamos una nueva cedula al cliente
+        self.__cedula = cedula  
 
     def generar_factura(self, fecha, valor_total):
         factura = Factura(fecha, valor_total)  # Creamos una nueva instancia de Factura con la fecha y valor total dados
-        self.__facturas.append(factura)  # Agregamos la factura a la lista de facturas del cliente
-        return factura  # Devolvemos la factura generada
+        self.__facturas.append(factura) 
+        return factura
 
     def obtener_facturas(self):
-        return self.__facturas  # Devolvemos la lista de facturas del cliente
+        return self.__facturas 
