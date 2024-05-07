@@ -8,7 +8,7 @@ class Antibiotico:
 
     @property
     def nombre(self):
-        return self.__nombre  # Retorna el nombre del antibiótico.
+        return self.__nombre  
 
     @nombre.setter
     def nombre(self, nombre):
@@ -16,24 +16,24 @@ class Antibiotico:
 
     @property
     def dosis(self):
-        return self.__dosis  # Retorna la dosis del antibiótico.
+        return self.__dosis 
 
     @dosis.setter
     def dosis(self, dosis):
-        self.__dosis = dosis  # Establece la dosis del antibiótico con el valor pasado como argumento.
+        self.__dosis = dosis 
 
     @property
     def tipo_animal(self):
-        return self.__tipo_animal  # Retorna el tipo de animal al que se aplica el antibiótico.
+        return self.__tipo_animal  
 
     @tipo_animal.setter
     def tipo_animal(self, tipo_animal):
-        self.__tipo_animal = tipo_animal  # Establece el tipo de animal al que se aplica el antibiótico con el valor pasado como argumento.
+        self.__tipo_animal = tipo_animal 
 
     @property
     def precio(self):
-        return self.__precio  # Retorna el precio del antibiótico.
+        return self.__precio  
 
     @precio.setter
     def precio(self, precio):
-        self.__precio = precio  # Establece el precio del antibiótico con el valor pasado como argumento.
+        self.__precio = precio 
